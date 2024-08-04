@@ -18,8 +18,8 @@ jobs:
         run: git clone -b dev --depth=1 https://github.com/FongMi/TV.git
       - name: DIY
         run: |
-          chmod +x /home/runner/work/diy-TV.sh
-          bash /home/runner/work/diy-TV.sh
+          chmod +x /home/runner/work/TV/.github/workflows/diy-TV.sh
+          bash /home/runner/work/TV/.github/workflows/diy-TV.sh
       - name: Build With Gradle
         run: |
           num=$(find ${{ github.workspace }} -name gradlew | grep -v exo | awk -F"/" '{print NF-1}')
